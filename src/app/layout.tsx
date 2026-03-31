@@ -96,6 +96,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={`${inter.variable} ${playfair.variable}`}>
+      <meta name="apple-mobile-web-app-title" content="ZoeCC" />
       <body className="font-sans">
         <Providers>{children}</Providers>
         <Script
