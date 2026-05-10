@@ -74,6 +74,7 @@ export default {
       boxShadow: {
         soft: "var(--shadow-soft)",
         elegant: "var(--shadow-elegant)",
+        glow: "var(--shadow-glow)",
       },
       transitionProperty: {
         smooth: "var(--transition-smooth)",
