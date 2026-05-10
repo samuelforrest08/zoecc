@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import Providers from "./providers";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -99,18 +99,8 @@ export default function RootLayout({
       <meta name="apple-mobile-web-app-title" content="ZoeCC" />
       <body className="font-sans">
         <Providers>{children}</Providers>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-LGS95FEFQL"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-LGS95FEFQL');`}
-        </Script>
       </body>
+      <GoogleAnalytics gaId="G-N001KF22QX" />
     </html>
   );
 }
